@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="shortcut icon" href="/favicon.png" type="image/png">
+<link rel="icon" href="/favicon.png" type="image/png">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Date Calculator - ToolNest</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f7fb;
+padding:20px;
+color:#222;
+}
+
+.container{
+max-width:700px;
+margin:auto;
+background:#fff;
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+h1{
+text-align:center;
+margin-bottom:25px;
+}
+
+label{
+display:block;
+margin-top:15px;
+font-size:18px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin-top:8px;
+font-size:16px;
+border:2px solid #ddd;
+border-radius:10px;
+}
+
+button{
+margin-top:25px;
+padding:12px 25px;
+background:#007bff;
+color:#fff;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-size:16px;
+}
+
+button:hover{
+background:#0056b3;
+}
+
+#result{
+margin-top:25px;
+padding:15px;
+background:#f1f1f1;
+border-radius:10px;
+font-size:18px;
+}
+
+.back{
+display:inline-block;
+margin-top:25px;
+padding:12px 20px;
+background:#222;
+color:#fff;
+text-decoration:none;
+border-radius:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📅 Date Calculator</h1>
+
+<label>
+Start Date
+</label>
+
+<input type="date" id="startDate">
+
+<label>
+End Date
+</label>
+
+<input type="date" id="endDate">
+
+<button onclick="calculateDate()">
+Calculate Difference
+</button>
+
+<div id="result">
+Result will appear here
+  </div><a class="back" href="index.html">
+⬅ Back To Home
+</a>
+
+</div>
+
+
+<script>
+
+function calculateDate(){
+
+let start=document.getElementById("startDate").value;
+let end=document.getElementById("endDate").value;
+
+
+if(start==="" || end===""){
+document.getElementById("result").innerHTML=
+"Please select both dates.";
+return;
+}
+
+
+let startDate=new Date(start);
+let endDate=new Date(end);
+
+
+let difference=endDate-startDate;
+
+
+if(difference<0){
+
+document.getElementById("result").innerHTML=
+"End date must be after start date.";
+
+return;
+
+}
+
+
+let days=Math.floor(
+difference/(1000*60*60*24)
+);
+
+
+let weeks=Math.floor(days/7);
+
+let months=Math.floor(days/30);
+
+
+document.getElementById("result").innerHTML=
+"Difference: <b>"+days+
+"</b> days<br><br>"+
+"Weeks: <b>"+weeks+
+"</b><br>"+
+"Approx Months: <b>"+months+
+"</b>";
+
+}
+
+</script>
+
+
+</body>
+</html>
