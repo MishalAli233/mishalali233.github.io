@@ -2,42 +2,88 @@
 <html lang="en">
 <head>
 
+<link rel="shortcut icon" href="/favicon.png" type="image/png">
+<link rel="icon" href="/favicon.png" type="image/png">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Word Counter | ToolNest</title>
+<title>Word Counter - ToolNest</title>
 
 <style>
-body{
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial,sans-serif;
+}
+
+body{
 background:#f5f7fb;
 padding:20px;
-text-align:center;
+color:#222;
 }
 
 .container{
-max-width:500px;
+max-width:800px;
 margin:auto;
-background:white;
-padding:30px;
+background:#fff;
+padding:25px;
 border-radius:15px;
 box-shadow:0 10px 25px rgba(0,0,0,.1);
 }
 
-textarea{
-width:100%;
-height:180px;
-padding:15px;
-font-size:18px;
-border-radius:10px;
-border:2px solid #ddd;
+h1{
+text-align:center;
+margin-bottom:20px;
 }
 
-.result{
-margin-top:20px;
-font-size:22px;
-font-weight:bold;
+textarea{
+width:100%;
+height:220px;
+padding:15px;
+font-size:18px;
+border:2px solid #ddd;
+border-radius:10px;
+resize:vertical;
+outline:none;
 }
+
+.results{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+margin-top:25px;
+}
+
+.box{
+background:#007bff;
+color:#fff;
+padding:20px;
+border-radius:12px;
+text-align:center;
+}
+
+.box h2{
+font-size:28px;
+margin-bottom:8px;
+}
+
+.box p{
+font-size:16px;
+}
+
+.back{
+display:inline-block;
+margin-top:25px;
+text-decoration:none;
+background:#222;
+color:#fff;
+padding:12px 20px;
+border-radius:10px;
+}
+
 </style>
 
 </head>
@@ -48,31 +94,83 @@ font-weight:bold;
 
 <h1>📝 Word Counter</h1>
 
-<textarea id="text" placeholder="Write your text here..." oninput="countWords()"></textarea>
+<textarea
+id="text"
+placeholder="Type or paste your text here..."
+oninput="countText()"></textarea>
 
-<div class="result" id="result">
-Words: 0 <br>
-Characters: 0
+<div class="results">
+
+<div class="box">
+<h2 id="words">0</h2>
+<p>Words</p>
 </div>
+
+<div class="box">
+<h2 id="characters">0</h2>
+<p>Characters</p>
+</div><div class="box">
+<h2 id="noSpaces">0</h2>
+<p>Characters (No Spaces)</p>
+</div>
+
+<div class="box">
+<h2 id="sentences">0</h2>
+<p>Sentences</p>
+</div>
+
+<div class="box">
+<h2 id="paragraphs">0</h2>
+<p>Paragraphs</p>
+</div>
+
+<div class="box">
+<h2 id="readingTime">0 Min</h2>
+<p>Reading Time</p>
+</div>
+
+</div>
+
+<a class="back" href="index.html">
+⬅ Back To Home
+</a>
 
 </div>
 
 <script>
 
-function countWords(){
+function countText(){
 
 let text=document.getElementById("text").value;
 
-let words=text.trim()=="" ? 0 : text.trim().split(/\s+/).length;
+let words=text.trim()===""
+?0
+:text.trim().split(/\s+/).length;
 
 let characters=text.length;
 
-document.getElementById("result").innerHTML=
-"Words: "+words+"<br>Characters: "+characters;
+let noSpaces=text.replace(/\s/g,"").length;
+
+let sentences=text.trim()===""
+?0let paragraphs=text.trim()===""
+?0
+:text.split(/\n+/).filter(p=>p.trim()!="").length;
+
+let readingTime=Math.max(1,Math.ceil(words/200));
+
+document.getElementById("words").innerHTML=words;
+document.getElementById("characters").innerHTML=characters;
+document.getElementById("noSpaces").innerHTML=noSpaces;
+document.getElementById("sentences").innerHTML=sentences;
+document.getElementById("paragraphs").innerHTML=paragraphs;
+document.getElementById("readingTime").innerHTML=readingTime+" Min";
 
 }
+
+countText();
 
 </script>
 
 </body>
 </html>
+:text.split(/[.!?]+/).filter(s=>s.trim()!="").length;
