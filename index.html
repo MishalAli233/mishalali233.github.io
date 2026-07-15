@@ -14,62 +14,10 @@
 crossorigin="anonymous"></script>
 
 <title>ToolNest - Free Online Tools</title>
-.faq-section{
-    max-width:900px;
-    margin:40px auto;
-    padding:20px;
-}
 
-.faq-section h2{
-    text-align:center;
-    margin-bottom:20px;
-}
-
-.faq-item{
-    background:#fff;
-    padding:15px;
-    margin:15px 0;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-}
-
-.faq-item h3{
-    margin-bottom:8px;
-}
-
-.faq-item p{
-    color:#555;
-    line-height:1.6;
-}
 <style>
 
-*{.why-toolnest{
-    max-width:900px;
-    margin:40px auto;
-    padding:20px;
-}
-
-.why-toolnest h2{
-    text-align:center;
-    margin-bottom:20px;
-}
-
-.why-box{
-    background:#fff;
-    margin:15px 0;
-    padding:18px;
-    border-radius:12px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-}
-
-.why-box h3{
-    margin-bottom:8px;
-}
-
-.why-box p{
-    color:#555;
-    line-height:1.6;
-}
+*{
 margin:0;
 padding:0;
 box-sizing:border-box;
@@ -153,10 +101,71 @@ border-radius:10px;
 text-decoration:none;
 }
 
+.card a:hover{
+background:#0056b3;
+}
+
+.why-toolnest{
+max-width:900px;
+margin:40px auto;
+padding:20px;
+}
+
+.why-toolnest h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+.why-box{
+background:#fff;
+margin:15px 0;
+padding:18px;
+border-radius:12px;
+box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.why-box h3{
+margin-bottom:8px;
+}
+
+.why-box p{
+color:#555;
+line-height:1.6;
+}
+
+.faq-section{
+max-width:900px;
+margin:40px auto;
+padding:20px;
+}
+
+.faq-section h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+.faq-item{
+background:#fff;
+padding:18px;
+margin:15px 0;
+border-radius:12px;
+box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.faq-item h3{
+margin-bottom:8px;
+}
+
+.faq-item p{
+color:#555;
+line-height:1.6;
+}
+
 .footer{
 margin-top:40px;
 padding-top:20px;
 border-top:1px solid #ddd;
+text-align:center;
 }
 
 .footer a{
@@ -171,9 +180,7 @@ margin:0 8px;
 
 <body>
 
-<div class="container">
-
-<h1>🛠 ToolNest</h1>
+<div class="container"><h1>🛠 ToolNest</h1>
 
 <p class="subtitle">
 Free Online Tools For Everyone
@@ -189,24 +196,15 @@ type="text"
 placeholder="🔍 Search tools..."
 onkeyup="searchTools()">
 
-<h2 class="section-title">
-⭐ Featured Tools
-</h2>
+<h2 class="section-title">⭐ Featured Tools</h2>
+
+<div class="tools"></div>
+
+<h2 class="section-title">📂 All Tools</h2>
 
 <div class="tools">
 
-
-
-
-
-
-</div>
-
-<h2 class="section-title">
-📂 All Tools
-</h2>
-
-<div class="tools"><div class="card">
+<div class="card">
 <h2>🎂 Age Calculator</h2>
 <a href="age.html">Open Tool</a>
 </div>
@@ -299,53 +297,60 @@ onkeyup="searchTools()">
 <div class="card">
 <h2>🔢 Random Number Generator</h2>
 <a href="random-number-generator.html">Open Tool</a>
-</div></div>
-<section class="why-toolnest">
-    <h2>⭐ Why Choose ToolNest?</h2>
-
-    <div class="why-box">
-        <h3>🆓 100% Free</h3>
-        <p>All our online tools are completely free to use.</p>
-    </div>
-
-    <div class="why-box">
-        <h3>⚡ Fast & Accurate</h3>
-        <p>Get quick and reliable results in seconds.</p>
-    </div>
-
-    <div class="why-box">
-        <h3>📱 Mobile Friendly</h3>
-        <p>Use ToolNest easily on mobile, tablet, or desktop.</p>
-    </div>
-
-    <div class="why-box">
-        <h3>🔒 Safe & Secure</h3>
-        <p>Your data stays private. We do not store your information.</p>
-    </div>
-
-    <div class="why-box">
-        <h3>🌍 Easy to Use</h3>
-        <p>Simple interface with no registration required.</p>
-    </div>
-    </section>
-<div class="footer">
-
-<p>
-<a href="about.html">About Us</a> |
-<a href="contact.html">Contact Us</a> |
-<footer>
-    <a href="privacy.html">Privacy Policy</a> |
-    <a href="terms.html">Terms & Conditions</a> |
-    <a href="disclaimer.html">Disclaimer</a>
-</footer>
-
-<p>© 2026 ToolNest. All Rights Reserved.</p>
-
 </div>
 
+</div><section class="why-toolnest">
+
+<h2>⭐ Why Choose ToolNest?</h2>
+
+<div class="why-box">
+<h3>🆓 100% Free</h3>
+<p>All our online tools are completely free to use.</p>
 </div>
 
-<script>
+<div class="why-box">
+<h3>⚡ Fast & Accurate</h3>
+<p>Get quick and reliable results in seconds.</p>
+</div>
+
+<div class="why-box">
+<h3>📱 Mobile Friendly</h3>
+<p>Works perfectly on mobile, tablet, and desktop.</p>
+</div>
+
+<div class="why-box">
+<h3>🔒 Safe & Secure</h3>
+<p>Your privacy matters. We do not store your personal information.</p>
+</div>
+
+<div class="why-box">
+<h3>🌍 Easy to Use</h3>
+<p>No registration required. Open a tool and start using it instantly.</p>
+</div>
+
+</section>
+
+<section class="faq-section">
+
+<h2>❓ Frequently Asked Questions</h2>
+
+<div class="faq-item">
+<h3>Is ToolNest free to use?</h3>
+<p>Yes! All tools on ToolNest are completely free.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do I need an account?</h3>
+<p>No. You can use all tools without creating an account.</p>
+</div>
+
+<div class="faq-item">
+<h3>Is my data safe?</h3>
+<p>Yes. We do not store your personal information or calculations.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can I use ToolNest on mobile?</<script>
 
 function searchTools(){
 
