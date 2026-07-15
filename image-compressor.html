@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="shortcut icon" href="/favicon.png" type="image/png">
+<link rel="icon" href="/favicon.png" type="image/png">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Image Compressor - ToolNest</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f7fb;
+padding:20px;
+color:#222;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:#fff;
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+h1{
+text-align:center;
+margin-bottom:20px;
+}
+
+input{
+display:block;
+margin:20px auto;
+font-size:16px;
+}
+
+.preview{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.box{
+width:300px;
+text-align:center;
+}
+
+.box img{
+max-width:100%;
+border-radius:10px;
+margin-top:10px;
+}
+
+button{
+margin-top:20px;
+padding:12px 20px;
+background:#007bff;
+color:#fff;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0056b3;
+}
+
+.back{
+display:inline-block;
+margin-top:25px;
+padding:12px 20px;
+background:#222;
+color:#fff;
+text-decoration:none;
+border-radius:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🖼️ Image Compressor</h1>
+
+<input type="file" id="upload" accept="image/*">
+
+<div class="preview">
+
+<div class="box">
+<h3>Original Image</h3>
+<img id="original">
+</div>
+
+<div class="box">
+<h3>Compressed Image</h3>
+<img id="compressed">
+</div>
+<p id="size"></p>
+
+<button onclick="compressImage()">
+Compress Image
+</button>
+
+<br>
+
+<a class="back" href="index.html">
+⬅ Back To Home
+</a>
+
+</div>
+
+
+<script>
+
+let imageFile;
+let imageData;
+
+
+document.getElementById("upload").addEventListener("change",function(e){
+
+imageFile=e.target.files[0];
+
+if(imageFile){
+
+let reader=new FileReader();function compressImage(){
+
+if(!imageData){
+alert("Please select an image first");
+return;
+}
+
+let img=new Image();
+
+img.src=imageData;
+
+img.onload=function(){
+
+let canvas=document.createElement("canvas");
+
+let ctx=canvas.getContext("2d");
+
+
+let width=img.width;
+let height=img.height;
+
+
+let maxWidth=800;
+
+
+if(width>maxWidth){
+
+height=height*(maxWidth/width);
+width=maxWidth;
+
+}
+
+
+canvas.width=width;
+canvas.height=height;
+
+
+ctx.drawImage(img,0,0,width,height);
+
+
+let compressed=canvas.toDataURL(
+"image/jpeg",
+0.6
+);
+
+
+document.getElementById("compressed").src=compressed;
+
+
+let size=Math.round(
+(compressed.length*3)/4
+/1024
+);
+
+
+document.getElementById("size").innerHTML +=
+"<br>Compressed Size: "+size+" KB";
+
+
+}
+
+
+}
+
+</script>
+
+</body>
+</html><div class="card">
+<h2>🖼️ Image Compressor</h2>
+<a href="image-compressor.html">Open Tool</a>
+</div>
+
+reader.onload=function(event){
+
+imageData=event.target.result;
+
+document.getElementById("original").src=imageData;
+
+document.getElementById("size").innerHTML=
+"Original Size: "+(imageFile.size/1024).toFixed(2)+" KB";
+
+}
+
+reader.readAsDataURL(imageFile);
+
+}
+
+});
+</div>
