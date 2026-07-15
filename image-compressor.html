@@ -42,7 +42,6 @@ margin-bottom:20px;
 input{
 display:block;
 margin:20px auto;
-font-size:16px;
 }
 
 .preview{
@@ -64,10 +63,11 @@ margin-top:10px;
 }
 
 button{
-margin-top:20px;
+display:block;
+margin:20px auto;
 padding:12px 20px;
 background:#007bff;
-color:#fff;
+color:white;
 border:none;
 border-radius:10px;
 cursor:pointer;
@@ -77,12 +77,18 @@ button:hover{
 background:#0056b3;
 }
 
+#size{
+text-align:center;
+margin-top:15px;
+font-size:18px;
+}
+
 .back{
 display:inline-block;
 margin-top:25px;
 padding:12px 20px;
 background:#222;
-color:#fff;
+color:white;
 text-decoration:none;
 border-radius:10px;
 }
@@ -110,13 +116,14 @@ border-radius:10px;
 <h3>Compressed Image</h3>
 <img id="compressed">
 </div>
+
+</div>
+
 <p id="size"></p>
 
 <button onclick="compressImage()">
 Compress Image
 </button>
-
-<br>
 
 <a class="back" href="index.html">
 ⬅ Back To Home
@@ -127,26 +134,49 @@ Compress Image
 
 <script>
 
-let imageFile;
-let imageData;
+let imageData="";
 
 
 document.getElementById("upload").addEventListener("change",function(e){
 
-imageFile=e.target.files[0];
+let file=e.target.files[0];
 
-if(imageFile){
+if(file){
 
-let reader=new FileReader();function compressImage(){
+let reader=new FileReader();
 
-if(!imageData){
+reader.onload=function(event){
+
+imageData=event.target.result;
+
+document.getElementById("original").src=imageData;
+
+document.getElementById("size").innerHTML=
+"Original Size: "+
+(file.size/1024).toFixed(2)
++" KB";
+
+}
+
+reader.readAsDataURL(file);
+
+}
+
+});
+
+
+function compressImage(){
+
+if(imageData===""){
 alert("Please select an image first");
 return;
 }
 
+
 let img=new Image();
 
 img.src=imageData;
+
 
 img.onload=function(){
 
@@ -177,49 +207,27 @@ canvas.height=height;
 ctx.drawImage(img,0,0,width,height);
 
 
-let compressed=canvas.toDataURL(
-"image/jpeg",
-0.6
-);
+let compressed=
+canvas.toDataURL("image/jpeg",0.6);
 
 
 document.getElementById("compressed").src=compressed;
 
 
 let size=Math.round(
-(compressed.length*3)/4
-/1024
+(compressed.length*3)/4/1024
 );
 
 
 document.getElementById("size").innerHTML +=
-"<br>Compressed Size: "+size+" KB";
-
+"<br>Compressed Size: "
++size+" KB";
 
 }
-
 
 }
 
 </script>
 
 </body>
-
-
-reader.onload=function(event){
-
-imageData=event.target.result;
-
-document.getElementById("original").src=imageData;
-
-document.getElementById("size").innerHTML=
-"Original Size: "+(imageFile.size/1024).toFixed(2)+" KB";
-
-}
-
-reader.readAsDataURL(imageFile);
-
-}
-
-});
-</div>
+</html>
