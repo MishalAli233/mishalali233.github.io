@@ -68,7 +68,11 @@ cursor:pointer;
 transition:.3s;
 }
 
-button:hover{.back{
+button:hover{
+background:#0056b3;
+}
+
+.back{
 display:inline-block;
 margin-top:25px;
 padding:12px 20px;
@@ -88,39 +92,29 @@ border-radius:10px;
 
 <h1>🔤 Text Case Converter</h1>
 
-<textarea
-id="text"
-placeholder="Type or paste your text here..."></textarea>
+<textarea id="text" placeholder="Type or paste your text here..."></textarea>
 
 <div class="buttons">
 
-<button onclick="toUpperCaseText()">
-UPPERCASE
-</button>
+<button onclick="toUpperCaseText()">UPPERCASE</button>
 
-<button onclick="toLowerCaseText()">
-lowercase
-</button>
+<button onclick="toLowerCaseText()">lowercase</button>
 
-<button onclick="toTitleCase()">
-Title Case
-</button>
+<button onclick="toTitleCase()">Title Case</button>
 
-<button onclick="toSentenceCase()">
-Sentence Case
-</button>
+<button onclick="toSentenceCase()">Sentence Case</button>
 
-<button onclick="copyText()">
-📋 Copy Text
-</button>
+<button onclick="copyText()">📋 Copy Text</button>
 
-<button onclick="clearText()">
-🗑 Clear Text
-</button>
+<button onclick="clearText()">🗑 Clear Text</button>
 
 </div>
 
-<a class="back" href="index.html"><script>
+<a class="back" href="index.html">⬅ Back To Home</a>
+
+</div>
+
+<script>
 
 function toUpperCaseText(){
 let text=document.getElementById("text");
@@ -134,26 +128,23 @@ text.value=text.value.toLowerCase();
 
 function toTitleCase(){
 let text=document.getElementById("text");
-
-text.value=text.value
-.toLowerCase()
-.replace(/\b\w/g,function(letter){
+text.value=text.value.toLowerCase().replace(/\b\w/g,function(letter){
 return letter.toUpperCase();
 });
 }
 
 function toSentenceCase(){
 let text=document.getElementById("text");
-
 let value=text.value.toLowerCase();
 
+if(value.length>0){
 text.value=value.charAt(0).toUpperCase()+value.slice(1);
+}
 }
 
 function copyText(){
 let text=document.getElementById("text");
-text.select();
-document.execCommand("copy");
+navigator.clipboard.writeText(text.value);
 alert("Text copied successfully!");
 }
 
@@ -163,12 +154,5 @@ document.getElementById("text").value="";
 
 </script>
 
-</body><div class="card">
-<h2>🔤 Text Case Converter</h2>
-<a href="text-case-converter.html">Open Tool</a>
-</div>
+</body>
 </html>
-⬅ Back To Home
-</a>
-background:#0056b3;
-}
