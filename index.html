@@ -1,4 +1,4 @@
-8<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -101,11 +101,17 @@ border-radius:10px;
 text-decoration:none;
 }
 
-.card a:hover{
-background:#0056b3;
+.footer{
+margin-top:40px;
+padding-top:20px;
+border-top:1px solid #ddd;
 }
 
-.why-toolnest{
+.footer a{
+text-decoration:none;
+color:#007bff;
+margin:0 8px;
+}.why-toolnest{
 max-width:900px;
 margin:40px auto;
 padding:20px;
@@ -161,26 +167,15 @@ color:#555;
 line-height:1.6;
 }
 
-.footer{
-margin-top:40px;
-padding-top:20px;
-border-top:1px solid #ddd;
-text-align:center;
-}
-
-.footer a{
-text-decoration:none;
-color:#007bff;
-margin:0 8px;
-}
-
 </style>
 
 </head>
 
 <body>
 
-<div class="container"><h1>🛠 ToolNest</h1>
+<div class="container">
+
+<h1>🛠 ToolNest</h1>
 
 <p class="subtitle">
 Free Online Tools For Everyone
@@ -196,15 +191,18 @@ type="text"
 placeholder="🔍 Search tools..."
 onkeyup="searchTools()">
 
-<h2 class="section-title">⭐ Featured Tools</h2>
-
-<div class="tools"></div>
-
-<h2 class="section-title">📂 All Tools</h2>
+<h2 class="section-title">
+⭐ Featured Tools
+</h2>
 
 <div class="tools">
+</div>
 
-<div class="card">
+<h2 class="section-title">
+📂 All Tools
+</h2>
+
+<div class="tools"><div class="card">
 <h2>🎂 Age Calculator</h2>
 <a href="age.html">Open Tool</a>
 </div>
@@ -241,193 +239,90 @@ onkeyup="searchTools()">
 
 <div class="card">
 <h2>📏 Unit Converter</h2>
-<a href="unit.html">Open Tool</a>
+<a href="unit-converter.html">Open Tool</a>
 </div>
 
-<div class="card">
-<h2>📝 Word Counter</h2>
-<a href="word-counter.html">Open Tool</a>
 </div>
 
-<div class="card">
-<h2>📅 Date Difference</h2>
-<a href="date-difference.html">Open Tool</a>
-</div>
 
-<div class="card">
-<h2>🏷️ Discount Calculator</h2>
-<a href="discount-calculator.html">Open Tool</a>
-</div>
+<section class="why-toolnest">
 
-<div class="card">
-<h2>💸 Loan Calculator</h2>
-<a href="loan-calculator.html">Open Tool</a>
-</div>
-
-<div class="card">
-<h2>🧾 GST Calculator</h2>
-<a href="gst-calculator.html">Open Tool</a>
-</div>
-
-<div class="card">
-<h2>🌡️ Temperature Converter</h2>
-<a href="temperature-converter.html">Open Tool</a>
-</div>
-
-<div class="card">
-<h2>📏 Length Converter</h2>
-<a href="length-converter.html">Open Tool</a>
-</div>
-
-<div class="card">
-<h2>⚖️ Weight Converter</h2>
-<a href="weight-converter.html">Open Tool</a>
-</div>
-
-<div class="card">
-<h2>⚡ Electricity Bill Calculator</h2>
-<a href="electricity-bill.html">Open Tool</a>
-</div>
-
-<div class="card">
-<h2>💵 Salary Calculator</h2>
-<a href="salary-calculator.html">Open Tool</a>
-</div>
-
-<div class="card">
-<h2>🔢 Random Number Generator</h2>
-<a href="random-number-generator.html">Open Tool</a>
-</div>
-
-</div><section class="why-toolnest">
-
-<h2>⭐ Why Choose ToolNest?</h2>
+<h2>Why Choose ToolNest?</h2>
 
 <div class="why-box">
-<h3>🆓 100% Free</h3>
-<p>All our online tools are completely free to use.</p>
+<h3>🚀 Fast & Easy</h3>
+<p>All tools are simple, fast and easy to use without any complicated steps.</p>
 </div>
 
 <div class="why-box">
-<h3>⚡ Fast & Accurate</h3>
-<p>Get quick and reliable results in seconds.</p>
+<h3>🆓 Free Online Tools</h3>
+<p>Use our calculators and generators completely free anytime, anywhere.</p>
 </div>
 
 <div class="why-box">
 <h3>📱 Mobile Friendly</h3>
-<p>Works perfectly on mobile, tablet, and desktop.</p>
+<p>ToolNest works smoothly on mobile phones, tablets and computers.</p>
 </div>
 
 <div class="why-box">
 <h3>🔒 Safe & Secure</h3>
-<p>Your privacy matters. We do not store your personal information.</p>
-</div>
-
-<div class="why-box">
-<h3>🌍 Easy to Use</h3>
-<p>No registration required. Open a tool and start using it instantly.</p>
+<p>Your data stays safe because our tools work directly in your browser.</p>
 </div>
 
 </section>
 
+
 <section class="faq-section">
 
-<h2>❓ Frequently Asked Questions</h2>
+<h2>Frequently Asked Questions</h2>
 
 <div class="faq-item">
-<h3>Is ToolNest free to use?</h3>
-<p>Yes! All tools on ToolNest are completely free.</p>
+<h3>Are ToolNest tools free?</h3>
+<p>Yes, all tools available on ToolNest are free to use.</p>
 </div>
 
 <div class="faq-item">
-<h3>Do I need an account?</h3>
-<p>No. You can use all tools without creating an account.</p>
+<h3>Do I need to install any software?</h3>
+<p>No, you can use all tools directly from your web browser.</p>
 </div>
 
 <div class="faq-item">
-<h3>Is my data safe?</h3>
-<p>Yes. We do not store your personal information or calculations.</p>
+<h3>Is ToolNest mobile friendly?</h3>
+<p>Yes, ToolNest is designed to work on all devices.</p>
 </div>
 
 <div class="faq-item">
-<h3>Can I use ToolNest on mobile?</<script>
+<h3>Are my calculations stored?</h3>
+<p>No, calculations are processed in your browser and are not stored.</p>
+</div>
+
+</section>
+
+
+<div class="footer">
+
+<p>
+© 2026 ToolNest. All Rights Reserved.
+</p>
+
+<p>
+<a href="privacy.html">Privacy Policy</a>
+|
+<a href="terms.html">Terms & Conditions</a>
+|
+<a href="contact.html">Contact</a>
+</p>
+
+</div>
+
+
+</div>
+
 
 <script>
 
-function searchTools(){
-
-let input=document.getElementById("search").value.toLowerCase();
-
-let cards=document.getElementsByClassName("card");
-
-for(let i=0;i<cards.length;i++){
-
-let text=cards[i].innerText.toLowerCase();
-
-cards[i].style.display=text.includes(input) ? "" : "none";
-
-}
-
-}
-
-let dark=false;
-
 function darkMode(){
 
-dark=!dark;
-
-document.body.style.background=dark?"#222":"#f5f7fb";
-document.body.style.color=dark?"#fff":"#222";
-
-let cards=document.getElementsByClassName("card");
-
-for(let i=0;i<cards.length;i++){
-
-cards[i].style.background=dark?"#333":"#fff";
-cards[i].style.color=dark?"#fff":"#222";
-
-}
-
-}
-
-</script>
-
-</body>
-</html>
-
-let cards=document.getElementsByClassName("card");
-
-for(let i=0;i<cards.length;i++){
-
-let text=cards[i].innerText.toLowerCase();
-
-cards[i].style.display=text.includes(input) ? "" : "none";
-
-}
-
-}
-
-let dark=false;
-
-function darkMode(){
-
-dark=!dark;
-
-document.body.style.background=dark?"#222":"#f5f7fb";
-document.body.style.color=dark?"#fff":"#222";
-
-let cards=document.getElementsByClassName("card");
-
-for(let i=0;i<cards.length;i++){
-
-cards[i].style.background=dark?"#333":"#fff";
-cards[i].style.color=dark?"#fff":"#222";
-
-}
-
-}
-
-</script>
-
-</body>
-</html>
+document.body.style.background =
+document.body.style.background=="#222"
+?"#
