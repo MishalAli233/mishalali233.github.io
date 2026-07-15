@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+8<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -352,9 +352,48 @@ onkeyup="searchTools()">
 <div class="faq-item">
 <h3>Can I use ToolNest on mobile?</<script>
 
+<script>
+
 function searchTools(){
 
 let input=document.getElementById("search").value.toLowerCase();
+
+let cards=document.getElementsByClassName("card");
+
+for(let i=0;i<cards.length;i++){
+
+let text=cards[i].innerText.toLowerCase();
+
+cards[i].style.display=text.includes(input) ? "" : "none";
+
+}
+
+}
+
+let dark=false;
+
+function darkMode(){
+
+dark=!dark;
+
+document.body.style.background=dark?"#222":"#f5f7fb";
+document.body.style.color=dark?"#fff":"#222";
+
+let cards=document.getElementsByClassName("card");
+
+for(let i=0;i<cards.length;i++){
+
+cards[i].style.background=dark?"#333":"#fff";
+cards[i].style.color=dark?"#fff":"#222";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
 
 let cards=document.getElementsByClassName("card");
 
