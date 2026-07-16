@@ -10,7 +10,7 @@
 
 <meta name="description" content="ToolNest provides free online calculators, converters, generators and productivity tools. Fast, secure and mobile friendly.">
 
-<meta name="keywords" content="calculator, converters, generators, online tools, age calculator, bmi calculator, qr generator">
+<meta name="keywords" content="calculator, converter, generator, online tools, age calculator, bmi calculator, qr generator">
 
 <meta name="author" content="ToolNest">
 
@@ -31,8 +31,9 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#f4f7fb;
+background:#f5f7fb;
 color:#222;
+transition:.3s;
 }
 
 .container{
@@ -42,29 +43,30 @@ padding:20px;
 }
 
 h1{
-font-size:50px;
 text-align:center;
+font-size:52px;
 margin-top:20px;
 }
 
 .subtitle{
 text-align:center;
-font-size:18px;
+font-size:19px;
 color:#666;
-margin-top:15px;
-line-height:1.6;
+margin:20px auto;
+max-width:850px;
+line-height:1.7;
 }
 
 .dark-btn{
 display:block;
 margin:25px auto;
+padding:14px 28px;
 background:#222;
 color:#fff;
 border:none;
-padding:14px 25px;
-font-size:18px;
 border-radius:10px;
 cursor:pointer;
+font-size:18px;
 }
 
 #search{
@@ -95,8 +97,8 @@ gap:25px;
 background:#fff;
 padding:25px;
 border-radius:16px;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
 text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
 transition:.3s;
 }
 
@@ -105,8 +107,8 @@ transform:translateY(-5px);
 }
 
 .card h2{
-margin-bottom:12px;
 font-size:28px;
+margin-bottom:12px;
 }
 
 .card p{
@@ -120,13 +122,8 @@ display:inline-block;
 background:#0d6efd;
 color:#fff;
 text-decoration:none;
-padding:12px 24px;
+padding:12px 25px;
 border-radius:10px;
-}
-
-.about,
-.faq{
-margin-top:50px;
 }
 
 .info-box{
@@ -138,17 +135,38 @@ box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
 footer{
-margin-top:50px;
-padding:30px;
 background:#111827;
 color:#fff;
 text-align:center;
+padding:30px;
+margin-top:50px;
 }
 
 footer a{
 color:#fff;
 text-decoration:none;
-margin:0 10px;
+margin:0 8px;
+}
+
+.dark{
+background:#111827;
+color:#fff;
+}
+
+.dark .card,
+.dark .info-box{
+background:#1f2937;
+color:#fff;
+}
+
+.dark .card p{
+color:#ddd;
+}
+
+.dark #search{
+background:#1f2937;
+color:#fff;
+border:2px solid #555;
 }
 
 </style>
@@ -162,7 +180,7 @@ margin:0 10px;
 <h1>🛠 ToolNest</h1>
 
 <p class="subtitle">
-ToolNest offers free online calculators, converters, generators, and productivity tools. Fast, secure, accurate, and easy to use on any device.
+ToolNest offers free online calculators, converters, generators and productivity tools. Fast, secure, accurate and easy to use on any device.
 </p>
 
 <button class="dark-btn" onclick="darkMode()">
@@ -170,8 +188,8 @@ ToolNest offers free online calculators, converters, generators, and productivit
 </button>
 
 <input
-type="text"
 id="search"
+type="text"
 placeholder="🔍 Search tools..."
 onkeyup="searchTools()">
 
@@ -193,7 +211,7 @@ onkeyup="searchTools()">
 
 <div class="card">
 <h2>📏 Unit Converter</h2>
-<p>Convert different units quickly and accurately.</p>
+<p>Convert different measurement units easily.</p>
 <a href="unit.html">Open Tool</a>
 </div>
 
@@ -213,26 +231,26 @@ onkeyup="searchTools()">
 
 <div class="card">
 <h2>💱 Currency Converter</h2>
-<p>Convert world currencies easily.</p>
+<p>Convert currencies with ease.</p>
 <a href="currency-converter.html">Open Tool</a>
 </div>
 
 <div class="card">
+<h2>📊 Percentage Calculator</h2>
+<p>Calculate percentages instantly.</p>
+<a href="percentage.html">Open Tool</a>
+</div>
+
+<div class="card">
 <h2>💰 EMI Calculator</h2>
-<p>Calculate your monthly EMI instantly.</p>
+<p>Calculate your monthly EMI quickly.</p>
 <a href="emi.html">Open Tool</a>
 </div>
 
 <div class="card">
 <h2>🏦 Loan Calculator</h2>
-<p>Estimate loan payments quickly.</p>
+<p>Estimate your loan payments.</p>
 <a href="loan-calculator.html">Open Tool</a>
-</div>
-
-<div class="card">
-<h2>📊 Percentage Calculator</h2>
-<p>Calculate percentages in seconds.</p>
-<a href="percentage.html">Open Tool</a>
 </div>
 
 <div class="card">
@@ -242,46 +260,6 @@ onkeyup="searchTools()">
 </div>
 
 <div class="card"><div class="card">
-<h2>🔤 Text Case Converter</h2>
-<p>Convert text to uppercase, lowercase and more.</p>
-<a href="text-case-converter.html">Open Tool</a>
-</div>
-
-<div class="card">
-<h2>📝 Word Counter</h2>
-<p>Count words and characters instantly.</p>
-<a href="word-counter.html">Open Tool</a>
-</div>
-
-<div class="card">
-<h2>⚖️ Weight Converter</h2>
-<p>Convert weight units accurately.</p>
-<a href="weight-converter.html">Open Tool</a>
-</div>
-
-<div class="card">
-<h2>🧮 Scientific Calculator</h2>
-<p>Advanced scientific calculations.</p>
-<a href="scientific-calculator.html">Open Tool</a>
-</div>
-
-<div class="card">
-<h2>🖼️ Image Compressor</h2>
-<p>Compress images while maintaining quality.</p>
-<a href="image-compressor.html">Open Tool</a>
-</div>
-
-<div class="card">
-<h2>💼 Salary Calculator</h2>
-<p>Calculate salary easily.</p>
-<a href="salary-calculator.html">Open Tool</a>
-</div>
-
-<div class="card">
-<h2>🌡️ Temperature Converter</h2>
-<p>Convert Celsius, Fahrenheit and Kelvin.</p>
-<a href="temperature-converter.html">Open Tool</a>
-</div>
 <h2>📅 Date Calculator</h2>
 <p>Calculate dates quickly and accurately.</p>
 <a href="date-calculator.html">Open Tool</a>
@@ -289,13 +267,13 @@ onkeyup="searchTools()">
 
 <div class="card">
 <h2>📆 Date Difference Calculator</h2>
-<p>Find the difference between two dates.</p>
+<p>Find the difference between any two dates.</p>
 <a href="date-difference.html">Open Tool</a>
 </div>
 
 <div class="card">
 <h2>💸 Discount Calculator</h2>
-<p>Calculate discounts and final prices.</p>
+<p>Calculate discounts and final prices instantly.</p>
 <a href="discount-calculator.html">Open Tool</a>
 </div>
 
@@ -307,7 +285,7 @@ onkeyup="searchTools()">
 
 <div class="card">
 <h2>🧾 GST Calculator</h2>
-<p>Calculate GST amounts instantly.</p>
+<p>Calculate GST in seconds.</p>
 <a href="gst-calculator.html">Open Tool</a>
 </div>
 
@@ -319,82 +297,178 @@ onkeyup="searchTools()">
 
 <div class="card">
 <h2>🎨 Color Picker</h2>
-<p>Pick colors and copy HEX/RGB values.</p>
+<p>Select colors and copy HEX or RGB values.</p>
 <a href="color-picker.html">Open Tool</a>
 </div>
 
 <div class="card">
 <h2>⏱️ Countdown Timer</h2>
-<p>Create countdown timers for events.</p>
+<p>Create countdown timers for important events.</p>
 <a href="countdown-timer.html">Open Tool</a>
 </div>
 
 <div class="card">
 <h2>🎲 Random Number Generator</h2>
 <p>Generate random numbers instantly.</p>
-<a href="random-number-generator.html">Open Tool</a>
-</div>
-
-<div class="card">
-<h2>📄 Lorem Ipsum Generator</h2>
-<p>Generate dummy text for your projects.</p>
-<a href="lorem-ipsum-generator.html">Open Tool</a>
-</div>
-
-</div>
-
-<section class="about">
-
-<h2 class="section-title">
-Why Choose ToolNest?
-</h2>
-
-<div class="info-box">
-<h3>🚀 Fast & Easy</h3>
-<p>
-All tools are designed to be fast, simple and easy to use on desktop, tablet and mobile devices.
-</p>
-</div>
-
-<div class="info-box">
-<h3>🔒 Safe & Secure</h3>
-<p>
-Your data stays in your browser. We do not store your personal information.
-</p>
-</div>
-
-<div class="info-box">
-<h3>💯 Free Forever</h3>
-<p>
-Every calculator, converter and generator on ToolNest is completely free.
-</p>
-</div>
-
-  </section><section class="faq">
+<a href="random-number-generator.html<section class="faq">
 
 <h2 class="section-title">
 ❓ Frequently Asked Questions
 </h2>
 
 <div class="info-box">
-<h3>Is ToolNest free?</h3>
-<p>Yes, all tools on ToolNest are completely free to use.</p>
+<h3>Is ToolNest free to use?</h3>
+<p>
+Yes. All tools available on ToolNest are completely free.
+</p>
 </div>
 
 <div class="info-box">
 <h3>Do I need to create an account?</h3>
-<p>No. You can use all tools without signing up.</p>
+<p>
+No. You can use every tool without creating an account.
+</p>
 </div>
 
 <div class="info-box">
 <h3>Does ToolNest work on mobile?</h3>
-<p>Yes. ToolNest is fully responsive and works on phones, tablets and desktops.</p>
+<p>
+Yes. ToolNest is fully responsive and works on mobile, tablet and desktop devices.
+</p>
 </div>
 
 <div class="info-box">
 <h3>Is my data safe?</h3>
-<p>Yes. Most tools process data directly in your browser and we do not store your personal information.</p>
+<p>
+Yes. Most tools process your data directly in your browser and we do not store your personal information.
+</p>
 </div>
 
-  </section>
-<h
+</section>
+
+
+<footer>
+
+<h2>🛠 ToolNest</h2>
+
+<p>
+Free Online Calculators, Converters, Generators & Productivity Tools.
+</p>
+
+<br>
+
+<a href="about.html">About</a> |
+<a href="privacy-policy.html">Privacy Policy</a> |
+<a href="terms.html">Terms &amp; Conditions</a> |
+<a href="contact.html">Contact</a>
+
+<br><br>
+
+<p>
+📧 supporttoolnest@gmail.com
+</p>
+
+<p>
+© 2026 ToolNest. All Rights Reserved.
+</p>
+
+  </footer><script>
+
+function darkMode(){
+document.body.classList.toggle("dark");
+}
+
+function searchTools(){
+
+let input=document.getElementById("search").value.toLowerCase();
+
+let cards=document.querySelectorAll(".tools .card");
+
+cards.forEach(function(card){
+
+let text=card.innerText.toLowerCase();
+
+if(text.includes(input)){
+card.style.display="";
+}else{
+card.style.display="none";
+}
+
+});
+
+}
+
+window.onload=function(){
+
+document.getElementById("search").value="";
+
+};
+
+  </script><style>
+
+.dark{
+background:#111827;
+color:#ffffff;
+}
+
+.dark .card{
+background:#1f2937;
+color:#ffffff;
+}
+
+.dark .card p{
+color:#d1d5db;
+}
+
+.dark .info-box{
+background:#1f2937;
+color:#ffffff;
+}
+
+.dark #search{
+background:#374151;
+color:#ffffff;
+border:2px solid #4b5563;
+}
+
+.dark footer{
+background:#000000;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:38px;
+}
+
+.section-title{
+font-size:30px;
+}
+
+.card h2{
+font-size:22px;
+}
+
+.subtitle{
+font-size:16px;
+}
+
+.dark-btn{
+width:100%;
+max-width:300px;
+}
+
+}
+
+</style>
+
+</div>
+
+</body>
+
+</html>
+<h2>
