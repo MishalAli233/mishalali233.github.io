@@ -324,7 +324,17 @@ onkeyup="searchTools()">
 <p>Generate placeholder text for websites and designs.</p>
 <a href="lorem-ipsum-generator.html">Open Tool</a>
 </div>
+<div class="card">
+<h2>🔤 Text Case Converter</h2>
+<p>Convert text to uppercase, lowercase and title case.</p>
+<a href="text-case-converter.html">Open Tool</a>
+</div>
 
+<div class="card">
+<h2>📝 Word Counter</h2>
+<p>Count words, characters and paragraphs instantly.</p>
+<a href="word-counter.html">Open Tool</a>
+</div>
 </div><section>
 
 <h2 class="section-title">
