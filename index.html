@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <link rel="shortcut icon" href="/favicon.png" type="image/png">
@@ -11,7 +10,7 @@
 
 <meta name="description" content="ToolNest provides free online calculators, converters, generators and productivity tools. Fast, secure and mobile friendly.">
 
-<meta name="keywords" content="free online tools, calculator, age calculator, bmi calculator, qr generator, password generator, unit converter">
+<meta name="keywords" content="calculator, converters, generators, online tools, age calculator, bmi calculator, qr generator">
 
 <meta name="author" content="ToolNest">
 
@@ -21,7 +20,6 @@
 crossorigin="anonymous"></script>
 
 <title>ToolNest - Free Online Tools</title>
-
 
 <style>
 
@@ -33,297 +31,330 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#f5f7fb;
+background:#f4f7fb;
 color:#222;
-padding:20px;
 }
 
 .container{
-max-width:1100px;
+max-width:1200px;
 margin:auto;
-text-align:center;
+padding:20px;
 }
 
 h1{
-font-size:42px;
-margin:20px 0;
+font-size:50px;
+text-align:center;
+margin-top:20px;
 }
 
 .subtitle{
+text-align:center;
 font-size:18px;
 color:#666;
-margin-bottom:20px;
+margin-top:15px;
+line-height:1.6;
 }
 
 .dark-btn{
+display:block;
+margin:25px auto;
 background:#222;
 color:#fff;
 border:none;
-padding:12px 20px;
+padding:14px 25px;
+font-size:18px;
 border-radius:10px;
 cursor:pointer;
 }
 
 #search{
+display:block;
 width:100%;
-max-width:500px;
-padding:14px;
-margin:20px auto;
+max-width:600px;
+margin:25px auto;
+padding:15px;
 font-size:18px;
 border:2px solid #ddd;
-border-radius:10px;
-display:block;
+border-radius:12px;
+outline:none;
 }
 
 .section-title{
-font-size:30px;
-margin:35px 0 15px;
+text-align:center;
+font-size:38px;
+margin:45px 0 25px;
 }
 
 .tools{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
 }
 
 .card{
-background:white;
+background:#fff;
 padding:25px;
-border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,.1);
+border-radius:16px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card h2{
-margin-bottom:10px;
-font-size:22px;
+margin-bottom:12px;
+font-size:28px;
 }
 
 .card p{
 color:#666;
-line-height:1.6;
-margin-bottom:15px;
+line-height:1.7;
+margin-bottom:20px;
 }
 
 .card a{
 display:inline-block;
-background:#007bff;
-color:white;
-padding:12px 20px;
-border-radius:10px;
+background:#0d6efd;
+color:#fff;
 text-decoration:none;
+padding:12px 24px;
+border-radius:10px;
+}
+
+.about,
+.faq{
+margin-top:50px;
+}
+
+.info-box{
+background:#fff;
+padding:25px;
+margin:20px 0;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+footer{
+margin-top:50px;
+padding:30px;
+background:#111827;
+color:#fff;
+text-align:center;
+}
+
+footer a{
+color:#fff;
+text-decoration:none;
+margin:0 10px;
 }
 
 </style>
 
 </head>
 
-
 <body>
-
 
 <div class="container">
 
-
 <h1>🛠 ToolNest</h1>
 
-<p>
+<p class="subtitle">
 ToolNest offers free online calculators, converters, generators, and productivity tools. Fast, secure, accurate, and easy to use on any device.
 </p>
-
-<p class="subtitle">
-Free Online Tools For Everyone
-</p>
-
 
 <button class="dark-btn" onclick="darkMode()">
 🌙 Dark Mode
 </button>
 
-
-<input id="search" type="text" placeholder="🔍 Search tools..." onkeyup="searchTools()">
-
-
+<input
+type="text"
+id="search"
+placeholder="🔍 Search tools..."
+onkeyup="searchTools()">
 
 <h2 class="section-title">
 ⭐ Featured Tools
 </h2>
 
-
-<div class="tools">
-
-
-<div class="card">
+<div class="tools"><div class="card">
 <h2>🎂 Age Calculator</h2>
-<p>Calculate your exact age in years, months, and days instantly.</p>
+<p>Calculate your exact age in years, months and days.</p>
 <a href="age.html">Open Tool</a>
 </div>
 
-
 <div class="card">
 <h2>⚖️ BMI Calculator</h2>
-<p>Check your Body Mass Index and find out if your weight is healthy.</p>
+<p>Check your Body Mass Index instantly.</p>
 <a href="bmi.html">Open Tool</a>
 </div>
-
 
 <div class="card">
 <h2>📏 Unit Converter</h2>
 <p>Convert different units quickly and accurately.</p>
-<a href="unit-converter.html">Open Tool</a>
+<a href="unit.html">Open Tool</a>
 </div>
-
 
 <div class="card">
 <h2>🔳 QR Generator</h2>
-<p>Create QR codes instantly for links, text, and more.</p>
+<p>Create QR codes for links, text and more.</p>
 <a href="qr.html">Open Tool</a>
 </div>
 
+</div>
 
-</div><h2 class="section-title">
+<h2 class="section-title">
 📂 All Tools
 </h2>
 
-
 <div class="tools">
-
 
 <div class="card">
 <h2>💱 Currency Converter</h2>
-<p>Convert currencies quickly with accurate exchange calculations.</p>
+<p>Convert world currencies easily.</p>
 <a href="currency-converter.html">Open Tool</a>
 </div>
 
-
 <div class="card">
 <h2>💰 EMI Calculator</h2>
-<p>Calculate your monthly loan EMI in just a few seconds.</p>
+<p>Calculate your monthly EMI instantly.</p>
 <a href="emi.html">Open Tool</a>
 </div>
 
-
 <div class="card">
-<h2>🔐 Password Generator</h2>
-<p>Create strong and secure passwords to protect your accounts.</p>
-<a href="password.html">Open Tool</a>
+<h2>🏦 Loan Calculator</h2>
+<p>Estimate loan payments quickly.</p>
+<a href="loan-calculator.html">Open Tool</a>
 </div>
-
 
 <div class="card">
 <h2>📊 Percentage Calculator</h2>
-<p>Calculate percentages instantly.</p>
+<p>Calculate percentages in seconds.</p>
 <a href="percentage.html">Open Tool</a>
 </div>
 
+<div class="card">
+<h2>🔐 Password Generator</h2>
+<p>Create strong and secure passwords.</p>
+<a href="password.html">Open Tool</a>
+</div>
+
+<div class="card"><div class="card">
+<h2>📅 Date Calculator</h2>
+<p>Calculate dates quickly and accurately.</p>
+<a href="date-calculator.html">Open Tool</a>
+</div>
+
+<div class="card">
+<h2>📆 Date Difference Calculator</h2>
+<p>Find the difference between two dates.</p>
+<a href="date-difference.html">Open Tool</a>
+</div>
+
+<div class="card">
+<h2>💸 Discount Calculator</h2>
+<p>Calculate discounts and final prices.</p>
+<a href="discount-calculator.html">Open Tool</a>
+</div>
+
+<div class="card">
+<h2>⚡ Electricity Bill Calculator</h2>
+<p>Estimate your electricity bill easily.</p>
+<a href="electricity-bill.html">Open Tool</a>
+</div>
+
+<div class="card">
+<h2>🧾 GST Calculator</h2>
+<p>Calculate GST amounts instantly.</p>
+<a href="gst-calculator.html">Open Tool</a>
+</div>
+
+<div class="card">
+<h2>📏 Length Converter</h2>
+<p>Convert meters, feet, inches and more.</p>
+<a href="length-converter.html">Open Tool</a>
+</div>
+
+<div class="card">
+<h2>🎨 Color Picker</h2>
+<p>Pick colors and copy HEX/RGB values.</p>
+<a href="color-picker.html">Open Tool</a>
+</div>
+
+<div class="card">
+<h2>⏱️ Countdown Timer</h2>
+<p>Create countdown timers for events.</p>
+<a href="countdown-timer.html">Open Tool</a>
+</div>
+
+<div class="card">
+<h2>🎲 Random Number Generator</h2>
+<p>Generate random numbers instantly.</p>
+<a href="random-number-generator.html">Open Tool</a>
+</div>
+
+<div class="card">
+<h2>📄 Lorem Ipsum Generator</h2>
+<p>Generate dummy text for your projects.</p>
+<a href="lorem-ipsum-generator.html">Open Tool</a>
+</div>
 
 </div>
 
-
-
-<section class="why-toolnest">
+<section class="about">
 
 <h2 class="section-title">
 Why Choose ToolNest?
 </h2>
 
-<div class="card">
-
-<h2>Fast & Easy</h2>
+<div class="info-box">
+<h3>🚀 Fast & Easy</h3>
 <p>
-All tools are simple, fast and work on mobile devices.
+All tools are designed to be fast, simple and easy to use on desktop, tablet and mobile devices.
 </p>
-
 </div>
 
-
-<div class="card">
-
-<h2>Free Tools</h2>
+<div class="info-box">
+<h3>🔒 Safe & Secure</h3>
 <p>
-Use our calculators and generators completely free.
+Your data stays in your browser. We do not store your personal information.
 </p>
-
 </div>
 
-
-<div class="card">
-
-<h2>Accurate Results</h2>
+<div class="info-box">
+<h3>💯 Free Forever</h3>
 <p>
-Our tools provide quick and reliable calculations.
+Every calculator, converter and generator on ToolNest is completely free.
 </p>
-
 </div>
 
-</section>
-
-
-
-<section class="faq-section">
+  </section><section class="faq">
 
 <h2 class="section-title">
-Frequently Asked Questions
+❓ Frequently Asked Questions
 </h2>
 
-
-<div class="card">
-
-<h2>Are ToolNest tools free?</h2>
-
-<p>
-Yes, all tools are free to use.
-</p>
-
+<div class="info-box">
+<h3>Is ToolNest free?</h3>
+<p>Yes, all tools on ToolNest are completely free to use.</p>
 </div>
 
-
-<div class="card">
-
-<h2>Can I use ToolNest on mobile?</h2>
-
-<p>
-Yes, ToolNest works on phones, tablets and computers.
-</p>
-
+<div class="info-box">
+<h3>Do I need to create an account?</h3>
+<p>No. You can use all tools without signing up.</p>
 </div>
 
-
-</section>
-
-
-
-<footer class="footer">
-
-<p>
-© 2026 ToolNest. All Rights Reserved.
-</p>
-
-<br>
-
-<a href="about.html">About</a>
-
-<a href="privacy-policy.html">Privacy Policy</a>
-
-<a href="terms.html">Terms & Conditions</a>
-
-
-<br><br>
-
-<p>
-Contact: supporttoolnest@gmail.com
-</p>
-
-
-</footer>
-
-
-
+<div class="info-box">
+<h3>Does ToolNest work on mobile?</h3>
+<p>Yes. ToolNest is fully responsive and works on phones, tablets and desktops.</p>
 </div>
 
+<div class="info-box">
+<h3>Is my data safe?</h3>
+<p>Yes. Most tools process data directly in your browser and we do not store your personal information.</p>
+</div>
 
-<script src="script.js"></script>
-
-
-</body>
-
-</html>
+  </section>
+<h
