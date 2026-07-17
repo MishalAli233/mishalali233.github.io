@@ -1,9 +1,8 @@
-e <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ToolNest - Free Online Tools</title>
@@ -39,7 +38,7 @@ e <!DOCTYPE html>
 }
 </script>
 
-<style>
+
 <script type="application/ld+json">
 {
  "@context":"https://schema.org",
@@ -53,6 +52,133 @@ e <!DOCTYPE html>
 
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+color:#222;
+line-height:1.6;
+transition:.3s;
+}
+
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
+
+
+h1{
+text-align:center;
+font-size:45px;
+margin:20px 0;
+}
+
+
+.subtitle{
+text-align:center;
+font-size:18px;
+color:#666;
+margin-bottom:20px;
+}
+
+
+.dark-btn{
+display:block;
+margin:20px auto;
+padding:12px 25px;
+border:none;
+border-radius:10px;
+background:#111827;
+color:white;
+cursor:pointer;
+}
+
+
+#search{
+display:block;
+width:100%;
+max-width:600px;
+margin:20px auto;
+padding:15px;
+border-radius:10px;
+border:2px solid #ddd;
+font-size:17px;
+}
+
+
+.section-title{
+text-align:center;
+margin:40px 0 20px;
+font-size:32px;
+}
+
+
+.tools{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+
+.card h2{
+margin-bottom:10px;
+}
+
+
+.card p{
+color:#666;
+margin-bottom:15px;
+}
+
+
+.card a{
+display:inline-block;
+padding:10px 20px;
+background:#0d6efd;
+color:white;
+text-decoration:none;
+border-radius:8px;
+}
+
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:50px;
+}
+
+
+footer a{
+color:white;
+text-decoration:none;
+margin:5px;
+}
+
+
+html{
+scroll-behavior:smooth;
+}</style>
+
 </head>
 
 <body>
@@ -61,7 +187,6 @@ e <!DOCTYPE html>
 
 
 <h1>🛠 ToolNest</h1>
-
 
 <p class="subtitle">
 Free Online Calculators, Converters, Generators and Productivity Tools.
@@ -139,7 +264,7 @@ onkeyup="searchTools()">
 
 <div class="card">
 <h2>💰 EMI Calculator</h2>
-<p>Calculate EMI payments.</p>
+<p>Calculate monthly EMI.</p>
 <a href="emi.html">Open Tool</a>
 </div>
 
@@ -160,14 +285,14 @@ onkeyup="searchTools()">
 
 <div class="card">
 <h2>🔐 Password Generator</h2>
-<p>Create secure passwords.</p>
+<p>Create strong passwords.</p>
 <a href="password.html">Open Tool</a>
 </div>
 
 
 <div class="card">
 <h2>🔤 Text Case Converter</h2>
-<p>Change text case.</p>
+<p>Convert text case.</p>
 <a href="text-case-converter.html">Open Tool</a>
 </div>
 
@@ -181,14 +306,14 @@ onkeyup="searchTools()">
 
 <div class="card">
 <h2>🖼️ Image Compressor</h2>
-<p>Compress images.</p>
+<p>Compress images easily.</p>
 <a href="image-compressor.html">Open Tool</a>
 </div>
 
 
 <div class="card">
 <h2>💼 Salary Calculator</h2>
-<p>Calculate salary.</p>
+<p>Calculate salary details.</p>
 <a href="salary-calculator.html">Open Tool</a>
 </div>
 
@@ -197,6 +322,69 @@ onkeyup="searchTools()">
 <h2>🌡️ Temperature Converter</h2>
 <p>Convert temperature units.</p>
 <a href="temperature-converter.html">Open Tool</a>
+</div>
+
+
+<div class="card">
+<h2>📅 Date Calculator</h2>
+<p>Calculate dates quickly.</p>
+<a href="date-calculator.html">Open Tool</a>
+</div>
+
+
+<div class="card">
+<h2>📆 Date Difference Calculator</h2>
+<p>Find date difference.</p>
+<a href="date-difference.html">Open Tool</a>
+</div>
+
+
+<div class="card">
+<h2>💸 Discount Calculator</h2>
+<p>Calculate discounts.</p>
+<a href="discount-calculator.html">Open Tool</a>
+</div>
+
+
+<div class="card">
+<h2>🧾 GST Calculator</h2>
+<p>Calculate GST instantly.</p>
+<a href="gst-calculator.html">Open Tool</a>
+</div>
+
+
+<div class="card">
+<h2>🎨 Color Picker</h2>
+<p>Pick HEX and RGB colors.</p>
+<a href="color-picker.html">Open Tool</a>
+</div>
+
+
+<div class="card">
+<h2>⏱️ Countdown Timer</h2>
+<p>Create countdown timers.</p>
+<a href="countdown-timer.html">Open Tool</a>
+</div>
+
+
+<div class="card">
+<h2>🎲 Random Number Generator</h2>
+<p>Generate random numbers.</p>
+<a href="random-number-generator.html">Open Tool</a>
+</div>
+
+
+<div class="card">
+<h2>📄 Lorem Ipsum Generator</h2>
+<p>Generate placeholder text.</p>
+<a href="lorem-ipsum-generator.html">Open Tool</a>
+</div>
+
+
+<div class="card">
+<h2>📝 Word Counter</h2>
+<p>Count words and characters.</p>
+<a href="word-counter.html">Open Tool</a>
 </div>
 
 
@@ -333,6 +521,7 @@ Yes, your data stays safe.
 </section>
 
 
+
 <footer>
 
 <h2>🛠 ToolNest</h2>
@@ -370,10 +559,10 @@ Free Online Calculators, Converters, Generators & Productivity Tools
 </p>
 
 
-</footer>
+</footer></div>
 
 
-</div><script>
+<script>
 
 function darkMode(){
 
@@ -403,7 +592,6 @@ card.style.display="none";
 }
 
 });
-
 
 }
 
@@ -444,13 +632,6 @@ color:white;
 }
 
 
-html{
-
-scroll-behavior:smooth;
-
-}
-
-
 @media(max-width:768px){
 
 h1{
@@ -468,105 +649,3 @@ font-size:36px;
 </body>
 
 </html>
-*{
-<style>
- margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-</style>
-body{
-background:#f5f7fb;
-color:#222;
-line-height:1.6;
-}
-
-
-.container{
-max-width:1200px;
-margin:auto;
-padding:20px;
-}
-
-
-h1{
-text-align:center;
-font-size:45px;
-margin:20px 0;
-}
-
-
-.subtitle{
-text-align:center;
-font-size:18px;
-color:#666;
-}
-
-
-.dark-btn{
-
-display:block;
-margin:20px auto;
-padding:12px 25px;
-border:0;
-border-radius:10px;
-background:#111827;
-color:white;
-cursor:pointer;
-
-}
-
-
-#search{
-
-display:block;
-width:100%;
-max-width:600px;
-margin:20px auto;
-padding:15px;
-border-radius:10px;
-border:2px solid #ddd;
-font-size:17px;
-
-}
-
-
-.tools{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-
-}
-
-
-.card{
-
-background:white;
-padding:25px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-
-}
-
-
-.card a{
-
-display:inline-block;
-margin-top:10px;
-padding:10px 20px;
-background:#0d6efd;
-color:white;
-text-decoration:none;
-border-radius:8px;
-
-}
-
-.section-title{
-</style>
-text-align:center;
-margin:40px 0 20px;
-
-}
