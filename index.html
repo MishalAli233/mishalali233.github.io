@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -21,6 +22,8 @@
 <meta name="author" content="ToolNest">
 
 <meta name="google-site-verification" content="v5JIgoEABLYgFi5fdS5EL3w0te-rNyVq55enqE_NXtM">
+
+<meta name="theme-color" content="#0d6efd">
 
 <link rel="icon" href="favicon.png" type="image/png">
 
@@ -65,7 +68,7 @@ body{
 background:#f5f7fb;
 color:#222;
 line-height:1.6;
-transition:.3s;
+transition:0.3s;
 }
 
 
@@ -175,11 +178,73 @@ margin:5px;
 }
 
 
+.stats{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin:40px auto;
+}
+
+
+.stat-box{
+background:white;
+width:170px;
+padding:20px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+
+.stat-box h2{
+color:#0d6efd;
+font-size:32px;
+}
+
+
+.dark{
+background:#111827;
+color:white;
+}
+
+
+.dark .card,
+.dark .stat-box{
+background:#1f2937;
+color:white;
+}
+
+
+.dark .card p,
+.dark .stat-box p{
+color:#ddd;
+}
+
+
+.dark #search{
+background:#1f2937;
+color:white;
+}
+
+
+@media(max-width:768px){
+
+h1{
+font-size:36px;
+}
+
+}
+
+
 html{
 scroll-behavior:smooth;
-}</style>
+}
+
+</style>
 
 </head>
+
 
 <body>
 
@@ -187,6 +252,7 @@ scroll-behavior:smooth;
 
 
 <h1>🛠 ToolNest</h1>
+
 
 <p class="subtitle">
 Free Online Calculators, Converters, Generators and Productivity Tools.
@@ -199,9 +265,12 @@ Fast, Secure and Mobile Friendly.
 </button>
 
 
-<h2 class="section-title">⭐ Featured Tools</h2>
+<h2 class="section-title">
+⭐ Featured Tools
+</h2>
 
- <input 
+
+<input 
 id="search"
 type="text"
 placeholder="🔍 Search tools..."
@@ -239,9 +308,7 @@ onkeyup="searchTools()">
 </div>
 
 
-</div>
-
-</section>
+</div><!-- ALL TOOLS -->
 
 <h2 class="section-title">
 📂 All Tools
@@ -383,12 +450,12 @@ onkeyup="searchTools()">
 <a href="word-counter.html">Open Tool</a>
 </div>
 
+
 </div>
- <section>
-<section>
-<h2 class="section-title">
-ℹ️ About ToolNest
-</h2>
+
+
+<!-- STATS -->
+
 
 <section class="stats">
 
@@ -397,15 +464,18 @@ onkeyup="searchTools()">
 <p>Free Tools</p>
 </div>
 
+
 <div class="stat-box">
 <h2>100%</h2>
-<p>Free to Use</p>
+<p>Free To Use</p>
 </div>
+
 
 <div class="stat-box">
 <h2>24/7</h2>
-<p>Available Anytime</p>
+<p>Available</p>
 </div>
+
 
 <div class="stat-box">
 <h2>100%</h2>
@@ -413,6 +483,20 @@ onkeyup="searchTools()">
 </div>
 
 </section>
+
+
+
+<!-- ABOUT -->
+
+
+<section>
+
+
+<h2 class="section-title">
+ℹ️ About ToolNest
+</h2>
+
+
 <div class="card">
 
 <p>
@@ -425,9 +509,7 @@ for everyone without registration.
 </div>
 
 
-</section>
-
-
+</section><!-- WHY CHOOSE TOOLNEST -->
 
 <section>
 
@@ -437,53 +519,127 @@ for everyone without registration.
 
 
 <div class="card">
-
 <h2>⚡ Fast & Easy</h2>
-
-<p>
-All tools are designed to give quick and accurate results.
-</p>
-
+<p>All tools are designed to give quick and accurate results.</p>
 </div>
 
 
 <div class="card">
-
 <h2>🔒 Safe & Secure</h2>
-
-<p>
-Most tools work directly in your browser.
-Your data is not stored.
-</p>
-
+<p>Most tools work directly in your browser. Your data is not stored.</p>
 </div>
 
 
 <div class="card">
-
 <h2>💯 Completely Free</h2>
-
-<p>
-All ToolNest tools are free to use.
-</p>
-
+<p>All ToolNest tools are free to use.</p>
 </div>
 
 
 <div class="card">
-
 <h2>📱 Mobile Friendly</h2>
-
-<p>
-Works perfectly on mobile, tablet and desktop.
-</p>
-
+<p>Works perfectly on mobile, tablet and desktop.</p>
 </div>
-
 
 </section>
 
 
+
+<!-- POPULAR TOOLS -->
+
+<section>
+
+<h2 class="section-title">
+🔥 Popular Tools
+</h2>
+
+
+<div class="tools">
+
+
+<div class="card">
+<h2>🎂 Age Calculator</h2>
+<p>Calculate your exact age.</p>
+<a href="age.html">Open Tool</a>
+</div>
+
+
+<div class="card">
+<h2>⚖️ BMI Calculator</h2>
+<p>Check your BMI instantly.</p>
+<a href="bmi.html">Open Tool</a>
+</div>
+
+
+<div class="card">
+<h2>📏 Unit Converter</h2>
+<p>Convert different units.</p>
+<a href="unit.html">Open Tool</a>
+</div>
+
+
+<div class="card">
+<h2>💱 Currency Converter</h2>
+<p>Convert currencies easily.</p>
+<a href="currency-converter.html">Open Tool</a>
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+<!-- LATEST TOOLS -->
+
+<section>
+
+<h2 class="section-title">
+🆕 Latest Tools
+</h2>
+
+
+<div class="tools">
+
+
+<div class="card">
+<h2>📝 Word Counter</h2>
+<p>Count words and characters.</p>
+<a href="word-counter.html">Open Tool</a>
+</div>
+
+
+<div class="card">
+<h2>📄 Lorem Ipsum Generator</h2>
+<p>Create placeholder text.</p>
+<a href="lorem-ipsum-generator.html">Open Tool</a>
+</div>
+
+
+<div class="card">
+<h2>🎲 Random Number Generator</h2>
+<p>Generate random numbers.</p>
+<a href="random-number-generator.html">Open Tool</a>
+</div>
+
+
+<div class="card">
+<h2>🎨 Color Picker</h2>
+<p>Pick HEX and RGB colors.</p>
+<a href="color-picker.html">Open Tool</a>
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+<!-- FAQ -->
 
 <section>
 
@@ -493,52 +649,62 @@ Works perfectly on mobile, tablet and desktop.
 
 
 <div class="card">
-
 <h2>Is ToolNest free?</h2>
-
-<p>
-Yes, all tools are completely free.
-</p>
-
+<p>Yes, all tools are completely free.</p>
 </div>
 
 
 <div class="card">
-
 <h2>Do I need an account?</h2>
-
-<p>
-No account is required.
-</p>
-
+<p>No account is required.</p>
 </div>
 
 
 <div class="card">
-
 <h2>Does ToolNest work on mobile?</h2>
-
-<p>
-Yes, it is fully responsive.
-</p>
-
+<p>Yes, it is fully responsive.</p>
 </div>
 
 
 <div class="card">
-
 <h2>Is my data safe?</h2>
-
-<p>
-Yes, your data stays safe.
-</p>
-
+<p>Yes, your data stays safe.</p>
 </div>
 
 
 </section>
 
 
+
+
+<!-- CONTACT -->
+
+<section>
+
+<h2 class="section-title">
+📞 Contact Us
+</h2>
+
+
+<div class="card">
+
+<p>
+Have a question, suggestion or found a bug?
+We would love to hear from you.
+</p>
+
+<p>
+📧 supporttoolnest@gmail.com
+</p>
+
+</div>
+
+</section>
+
+
+
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -568,16 +734,15 @@ Free Online Calculators, Converters, Generators & Productivity Tools
 
 
 <p>
-📧 supporttoolnest@gmail.com
-</p>
-
-
-<p>
 © 2026 ToolNest. All Rights Reserved.
 </p>
 
 
-</footer></div>
+</footer>
+
+
+</div>
+
 
 
 <script>
@@ -613,143 +778,4 @@ card.style.display="none";
 
 }
 
-</script>
-
-
-
-<style>
-
-.dark{
-
-background:#111827;
-color:white;
-
-}
-
-
-.dark .card{
-
-background:#1f2937;
-color:white;
-
-}
-
-
-.dark .card p{
-
-color:#ddd;
-
-}
-
-
-.dark #search{
-
-background:#1f2937;
-color:white;
-
-}
-.stats{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-margin:40px auto;
-}
-
-.stat-box{
-background:white;
-width:170px;
-padding:20px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
-
-.stat-box h2{
-color:#0d6efd;
-font-size:32px;
-margin-bottom:8px;
-}
-
-.stat-box p{
-color:#666;
-}
-
-.dark .stat-box{
-background:#1f2937;
-color:white;
-}
-
-.dark .stat-box p{
-color:#ddd;
-}
-<section>
-
-<h2 class="section-title">
-🔥 Popular Tools
-</h2>
-</section>   <!-- Popular Tools yahan khatam hota hai -->
-
-<!-- YAHAN Latest Tools paste karein -->
-
-<section>
-
-<h2 class="section-title">
-🆕 Latest Tools
-</h2>
-
-...
-</section>
-
-<!-- Iske baad FAQ section shuru hoga -->
-<section>
-
-<h2 class="section-title">
-❓ Frequently Asked Questions
-</h2>
-<div class="tools">
-
-<div class="card">
-<h2>🎂 Age Calculator</h2>
-<p>Calculate your exact age in years, months and days.</p>
-<a href="age.html">Open Tool</a>
-</div>
-
-<div class="card">
-<h2>⚖️ BMI Calculator</h2>
-<p>Check your Body Mass Index instantly.</p>
-<a href="bmi.html">Open Tool</a>
-</div>
-
-<div class="card">
-<h2>📏 Unit Converter</h2>
-<p>Convert length, weight, temperature and more.</p>
-<a href="unit.html">Open Tool</a>
-</div>
-
-<div class="card">
-<h2>💱 Currency Converter</h2>
-<p>Convert currencies with ease.</p>
-<a href="currency-converter.html">Open Tool</a>
-</div>
-
-</div>
-
-</section>
-@media(max-width:768px){
-
-h1{
-
-font-size:36px;
-
-}
-
-
-}
-
-</style>
-
-
-</body>
-
-</html>
+</
